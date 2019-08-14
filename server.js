@@ -30,6 +30,7 @@ app.use(function (req, res, next) {
 app.use('/api/account', require('./route/api/api_account'));
 app.use('/api/room', require('./route/api/api_room'));
 app.use('/api/emp', require('./route/api/api_employee'));
+app.use('/api/grade',require('./route/api/api_grade'));
 // listen 
 
 app.listen(5000, () => {

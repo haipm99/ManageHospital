@@ -49,7 +49,13 @@ router.get('/getAllEmp', (req, res) => {
             }
         }).catch(console.log)
 })
+//api : delete all
 
+router.get('/deleteAllEmp' , (req,res) =>{
+    Employee.deleteMany({}).then( () => {
+        res.status(200).json({msg : 'delete Success'});
+    })
+})
 
 
 module.exports = router;
