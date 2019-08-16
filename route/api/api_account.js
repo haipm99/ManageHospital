@@ -13,7 +13,7 @@ router.post('/login', (req, res) => {
     Account.findOne({ $and: [{ username }, { password }] })
         .then(user => {
             if (user) {
-                res.status(200).json({ msg: 'login success', fullName:user.fullName });
+                res.status(200).json({ msg: 'login success', fullName: user.fullName });
             } else {
                 res.status(400).json({ msg: 'Wrong user or password' });
             }

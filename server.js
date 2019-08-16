@@ -4,8 +4,9 @@ const mongoose = require('mongoose');
 const bodyParder = require('body-parser');
 
 //connect database 
-
-const uri = "mongodb://localhost:27017/ManageEmployee";
+//mongodb+srv://haine:123@haine-pgdue.mongodb.net/test?retryWrites=true&w=majority
+//mongodb://localhost:27017/ManageEmployee
+const uri = "mongodb+srv://haine:123@haine-pgdue.mongodb.net/ManageEmployee?retryWrites=true&w=majority";
 
 mongoose.connect(uri, { useNewUrlParser: true })
     .then(() => {
